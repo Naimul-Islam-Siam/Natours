@@ -1,0 +1,195 @@
+/*
+Colors
+
+light greens : #7ed56f;
+medium greens : #55c57a;
+dark greens : #28b485;
+
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	font-weight: 400;
+	font-family: "Lato", sans-serif;
+	color: #777;
+	line-height: 1.7;
+	padding: 30px;
+}
+
+.header {
+	background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url(../img/hero.jpg);
+	height: 95vh; /*always 95% of the screen*/
+	background-size: cover; /*always try to fit the width of the screen*/
+	background-position: top; /*top part of the image is fixed*/
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	position: relative;
+}
+
+.logo-box {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+}
+
+.logo {
+	height: 35px;
+}
+
+.logo:hover {
+	animation-name: logo;
+	animation-duration: 1.2s; 
+}
+
+@keyframes logo {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.text-box {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.primary-heading {
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.primary-heading-main {
+	display: block; /*takes full line similar as endl*/
+	font-size: 60px;
+	font-weight: 400;
+	letter-spacing: 35px;
+	animation-name: moveInLeft;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+}
+
+.primary-heading-sub {
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 14.4px;
+	word-spacing: 0.5px;
+	animation-name: moveInRight;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	margin-bottom: 40px;
+}
+
+@keyframes moveInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	
+	80% {
+		transform: translateX(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	80% {
+		transform: translateX(-20px);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveInBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	80% {
+		transform: translateY(-10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.btn:link,
+.btn:visited {
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 15px 40px;
+	border-radius: 100px;
+	display: inline-block;
+	transition: all 0.2s;
+	position: relative;
+}
+
+.btn:hover {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	transform: translateY(-3px);
+}
+
+.btn:active {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	transform:lateY(-1px);
+}
+
+.btn-white {
+	background-color: #fff;
+	color: #777;
+	animation: moveInBottom 1s ease-in-out 0.7s;
+	animation-fill-mode: backwards; /*will initialize the 0% state even before the animation starts*/
+									/*so that it will make a delay to the animation and hide the button at first*/
+}
+
+.btn::after {
+	content: ""; /*is a must*/
+	display: inline-block; /*is a must //as the original one is also inline block*/
+	height: 100%; /*exact of the original*/
+	width: 100%; /*exact of the original*/
+	position: absolute; /*to make "top" and "left" work*/
+	top: 0; /*start from the same point of the original*/
+	left: 0; /*start from the same point of the original*/
+	border-radius: 100px; /*exact of the original*/
+	z-index: -1; /*behind the original one*/
+	transition: all 0.5s;
+}
+
+.btn:hover::after {
+	transform: scaleX(1.4) scaleY(1.6);
+	opacity: 0;
+}
+
+.btn-white::after {
+	background-color: #fff;
+}
