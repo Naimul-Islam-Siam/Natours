@@ -50,26 +50,24 @@ body {
   transform: translate(-50%, -50%);
   text-align: center; }
 
-.primary-heading {
+.heading-primary {
   text-transform: uppercase;
   color: #fff; }
-
-.primary-heading-main {
-  display: block;
-  /*takes full line, similar as endl*/
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
-  animation: moveInLeft 1s ease-in-out; }
-
-.primary-heading-sub {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 14.4px;
-  word-spacing: 0.5px;
-  animation: moveInRight 1s ease-in-out;
-  margin-bottom: 40px; }
+  .heading-primary-main {
+    display: block;
+    /*takes full line, similar as endl*/
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: moveInLeft 1s ease-in-out; }
+  .heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 14.4px;
+    word-spacing: 0.5px;
+    animation: moveInRight 1s ease-in-out;
+    margin-bottom: 40px; }
 
 @keyframes moveInLeft {
   0% {
@@ -101,8 +99,7 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 15px 40px;
@@ -114,6 +111,9 @@ body {
 .btn:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -126,6 +126,8 @@ body {
   animation-fill-mode: backwards;
   /*will initialize the 0% state even before the animation starts*/
   /*so that it will make a delay to the animation and hide the button at first*/ }
+  .btn-white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -147,10 +149,3 @@ body {
   z-index: -1;
   /*place it behind the original one*/
   transition: all 0.5s; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
-
-.btn-white::after {
-  background-color: #fff; }

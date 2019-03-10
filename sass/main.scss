@@ -4,6 +4,7 @@ $color-primary-dark: #28b485;
 
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000;
 
 * {
 	margin: 0;
@@ -70,28 +71,29 @@ body {
 	text-align: center;
 }
 
-.primary-heading {
+.heading-primary {
 	text-transform: uppercase;
 	color: $color-white;
+
+	&-main {
+		display: block; /*takes full line, similar as endl*/
+		font-size: 60px;
+		font-weight: 400;
+		letter-spacing: 35px;
+		animation: moveInLeft 1s ease-in-out;
+	}
+
+	&-sub {
+		display: block;
+		font-size: 20px;
+		font-weight: 700;
+		letter-spacing: 14.4px;
+		word-spacing: 0.5px;
+		animation: moveInRight 1s ease-in-out;
+		margin-bottom: 40px;
+	}
 }
 
-.primary-heading-main {
-	display: block; /*takes full line, similar as endl*/
-	font-size: 60px;
-	font-weight: 400;
-	letter-spacing: 35px;
-	animation: moveInLeft 1s ease-in-out;
-}
-
-.primary-heading-sub {
-	display: block;
-	font-size: 20px;
-	font-weight: 700;
-	letter-spacing: 14.4px;
-	word-spacing: 0.5px;
-	animation: moveInRight 1s ease-in-out;
-	margin-bottom: 40px;
-}
 
 @keyframes moveInLeft {
 	0% {
@@ -141,53 +143,55 @@ body {
 	}
 }
 
-.btn:link,
-.btn:visited {
-	text-decoration: none;
-	text-transform: uppercase;
-	padding: 15px 40px;
-	border-radius: 100px;
-	display: inline-block;
-	transition: all 0.2s;
-	position: relative;
-}
+.btn {
+	&:link,
+	&:visited {
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 15px 40px;
+		border-radius: 100px;
+		display: inline-block;
+		transition: all 0.2s;
+		position: relative;
+	}
 
-.btn:hover {
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-	transform: translateY(-3px);
-}
+	&:hover {
+		box-shadow: 0 10px 20px rgba($color-black, 0.2);
+		transform: translateY(-3px);
 
-.btn:active {
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	transform:lateY(-1px);
-}
+			&::after {
+			transform: scaleX(1.4) scaleY(1.6);
+			opacity: 0;
+		}
+	}
 
-.btn-white {
-	background-color: $color-white;
-	color: $color-grey-dark;
-	animation: moveInBottom 1s ease-in-out 0.7s;
-	animation-fill-mode: backwards; /*will initialize the 0% state even before the animation starts*/
-									/*so that it will make a delay to the animation and hide the button at first*/
-}
+	&:active {
+		box-shadow: 0 5px 10px rgba($color-black, 0.2);
+		transform:lateY(-1px);
+	}
 
-.btn::after {
-	content: ""; /*is a must*/
-	display: inline-block; /*is a must //as the original one is also inline block*/
-	height: 100%; /*exact of the original*/
-	width: 100%; /*exact of the original*/
-	position: absolute; /*to make "top" and "left" work*/
-	top: 0; /*start from the same point of the original*/
-	left: 0; /*start from the same point of the original*/
-	border-radius: 100px; /*exact of the original*/
-	z-index: -1; /*place it behind the original one*/
-	transition: all 0.5s;
-}
+	&-white {
+		background-color: $color-white;
+		color: $color-grey-dark;
+		animation: moveInBottom 1s ease-in-out 0.7s;
+		animation-fill-mode: backwards; /*will initialize the 0% state even before the animation starts*/
+										/*so that it will make a delay to the animation and hide the button at first*/
 
-.btn:hover::after {
-	transform: scaleX(1.4) scaleY(1.6);
-	opacity: 0;
-}
+		&::after {
+			background-color: $color-white;
+		}
+	}
 
-.btn-white::after {
-	background-color: $color-white;
+	&::after {
+		content: ""; /*is a must*/
+		display: inline-block; /*is a must //as the original one is also inline block*/
+		height: 100%; /*exact of the original*/
+		width: 100%; /*exact of the original*/
+		position: absolute; /*to make "top" and "left" work*/
+		top: 0; /*start from the same point of the original*/
+		left: 0; /*start from the same point of the original*/
+		border-radius: 100px; /*exact of the original*/
+		z-index: -1; /*place it behind the original one*/
+		transition: all 0.5s;
+	}
 }
