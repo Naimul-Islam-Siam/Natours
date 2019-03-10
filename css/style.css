@@ -1,40 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-body {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Lato", sans-serif;
-  color: #777;
-  line-height: 1.7;
-  padding: 30px; }
-
-.header {
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  height: 95vh;
-  /*always 95% of the screen*/
-  background-size: cover;
-  /*always try to fit the width of the screen*/
-  background-position: top;
-  /*top part of the image is fixed regardless the responsive screen size*/
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /*(x y, x y, x y, x y)*/
-  position: relative; }
-
-.logo-box {
-  position: absolute;
-  top: 40px;
-  left: 40px; }
-
-.logo {
-  height: 35px; }
-
-.logo:hover {
-  animation-name: logo;
-  animation-duration: 1.2s; }
-
 @keyframes logo {
   0% {
     transform: scale(1); }
@@ -42,32 +5,6 @@ body {
     transform: scale(1.5); }
   100% {
     transform: scale(1); } }
-
-.text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
-
-.heading-primary {
-  text-transform: uppercase;
-  color: #fff; }
-  .heading-primary-main {
-    display: block;
-    /*takes full line, similar as endl*/
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 35px;
-    animation: moveInLeft 1s ease-in-out; }
-  .heading-primary-sub {
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 14.4px;
-    word-spacing: 0.5px;
-    animation: moveInRight 1s ease-in-out;
-    margin-bottom: 40px; }
 
 @keyframes moveInLeft {
   0% {
@@ -98,6 +35,38 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  color: #777;
+  line-height: 1.7;
+  padding: 30px; }
+
+.heading-primary {
+  text-transform: uppercase;
+  color: #fff; }
+  .heading-primary-main {
+    display: block;
+    /*takes full line, similar as endl*/
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: moveInLeft 1s ease-in-out; }
+  .heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 14.4px;
+    word-spacing: 0.5px;
+    animation: moveInRight 1s ease-in-out;
+    margin-bottom: 40px; }
 
 .btn:link, .btn:visited {
   text-decoration: none;
@@ -149,3 +118,34 @@ body {
   z-index: -1;
   /*place it behind the original one*/
   transition: all 0.5s; }
+
+.header {
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  height: 95vh;
+  /*always 95% of the screen*/
+  background-size: cover;
+  /*always try to fit the width of the screen*/
+  background-position: top;
+  /*top part of the image is fixed regardless the responsive screen size*/
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*(x y, x y, x y, x y)*/
+  position: relative; }
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px; }
+
+.logo {
+  height: 35px; }
+
+.logo:hover {
+  animation-name: logo;
+  animation-duration: 1.2s; }
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
