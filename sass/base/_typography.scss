@@ -29,3 +29,21 @@ body {
 		margin-bottom: 40px;
 	}
 }
+
+.heading-secondary {
+	font-size: 35px;
+	text-transform: uppercase;
+	font-weight: 700;
+	background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+	display: inline-block; //the image will occupy the space of the text only, otherwise would take the full block
+						//as it's inline-block, it will be treated as text to it's parent
+	-webkit-background-clip: text; //background only will be only for the text shape
+	color: transparent; //to show the linear-gradient color as text color
+	letter-spacing: 2px;
+	transition: all 0.2s;
+
+	&:hover {
+		transform: skewY(2deg) skewX(15deg) scale(1.1);
+		text-shadow: 5px 10px 20px rgba($color-black, 0.2); //[x y blur color]
+	}
+}
