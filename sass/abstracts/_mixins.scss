@@ -5,3 +5,13 @@
 		clear: both;
 	}
 }
+
+@mixin text-gradient {
+	& {
+		background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+		display: inline-block; //the image will occupy the space of the text only, otherwise would take the full block
+							//as it's inline-block, it will be treated as text to it's parent
+		-webkit-background-clip: text; //background only will be only for the text shape
+		color: transparent; //to show the linear-gradient color as text color
+	}
+}

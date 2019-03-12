@@ -1,5 +1,16 @@
-* {
+*,
+*::after,
+*::before {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	box-sizing: inherit; //better practice to use inheritence 
+						//it's easier to change box-sizing for plugins and other components
 }
+
+ html {
+ 	font-size: 62.5%; //define 1 rem //default font-size by browser is 16px, so 62.5% of 16px is 10px
+ }
+
+ body {
+ 	box-sizing: border-box;
+ }

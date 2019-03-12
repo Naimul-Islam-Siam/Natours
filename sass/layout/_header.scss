@@ -9,28 +9,30 @@
 	background-position: top; /*top part of the image is fixed regardless the responsive screen size*/
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*(x y, x y, x y, x y)*/
 	position: relative;
+
+	&__logo-box {
+		position: absolute;
+		top: 40px;
+		left: 40px;
+	}
+
+	&__logo {
+		height: 35px;
+	}
+
+	&__logo:hover {
+		animation-name: logo;
+		animation-duration: 1.2s; 
+	}
+
+
+	&__text-box {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
 }
 
-.logo-box {
-	position: absolute;
-	top: 40px;
-	left: 40px;
-}
 
-.logo {
-	height: 35px;
-}
-
-.logo:hover {
-	animation-name: logo;
-	animation-duration: 1.2s; 
-}
-
-
-.text-box {
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-}

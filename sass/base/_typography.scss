@@ -1,49 +1,59 @@
 body {
-	font-size: 16px;
+	// font-size: 16px;
 	font-weight: 400;
 	font-family: "Lato", sans-serif;
 	color: $color-grey-dark;
 	line-height: 1.7;
-	padding: 30px;
+	padding: 3rem;
 }
 
 .heading-primary {
 	text-transform: uppercase;
 	color: $color-white;
 
-	&-main {
+	&--main {
 		display: block; /*takes full line, similar as endl*/
-		font-size: 60px;
+		font-size: 6rem;
 		font-weight: 400;
-		letter-spacing: 35px;
+		letter-spacing: 3.5rem;
 		animation: moveInLeft 1s ease-in-out;
 	}
 
-	&-sub {
+	&--sub {
 		display: block;
-		font-size: 20px;
+		font-size: 2rem;
 		font-weight: 700;
-		letter-spacing: 14.4px;
+		letter-spacing: 1.44rem;
 		word-spacing: 0.5px;
 		animation: moveInRight 1s ease-in-out;
-		margin-bottom: 40px;
+		margin-bottom: 4rem;
 	}
 }
 
 .heading-secondary {
-	font-size: 35px;
+	font-size: 3.5rem;
 	text-transform: uppercase;
 	font-weight: 700;
-	background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-	display: inline-block; //the image will occupy the space of the text only, otherwise would take the full block
-						//as it's inline-block, it will be treated as text to it's parent
-	-webkit-background-clip: text; //background only will be only for the text shape
-	color: transparent; //to show the linear-gradient color as text color
+	@include text-gradient;
 	letter-spacing: 2px;
 	transition: all 0.2s;
 
 	&:hover {
 		transform: skewY(2deg) skewX(15deg) scale(1.1);
-		text-shadow: 5px 10px 20px rgba($color-black, 0.2); //[x y blur color]
+		text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2); //[x y blur color]
+	}
+}
+
+.heading-tertiary {
+	font-size: $default-font-size;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-size: $default-font-size;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
 	}
 }
