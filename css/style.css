@@ -217,11 +217,11 @@ body {
     .card__side--back {
       transform: rotateY(180deg); }
       .card__side--back-1 {
-        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+        background-image: linear-gradient(to right bottom, #20f3e9, #086c74); }
       .card__side--back-2 {
         background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
       .card__side--back-3 {
-        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+        background-image: linear-gradient(to right bottom, #ffb9f9, #ffb5b5); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
@@ -234,11 +234,11 @@ body {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture-1 {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
+      background-image: linear-gradient(to right bottom, #20f3e9, #086c74), url(../img/nat-5.jpg); }
     .card__picture-2 {
       background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg); }
     .card__picture-3 {
-      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
+      background-image: linear-gradient(to right bottom, #ffb9f9, #ffb5b5), url(../img/nat-7.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -254,11 +254,11 @@ body {
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone; }
     .card__heading-span-1 {
-      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(32, 243, 233, 0.85), rgba(8, 108, 116, 0.85)); }
     .card__heading-span-2 {
       background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
     .card__heading-span-3 {
-      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 249, 0.85), rgba(255, 181, 181, 0.85)); }
   .card__details {
     padding: 3rem; }
     .card__details ul {
