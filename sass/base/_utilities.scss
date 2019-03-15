@@ -2,6 +2,14 @@
 	text-align: center; //child of this parent is inline-block, so child will be treated as text
 }
 
+.u-margin-top-small {
+	margin-top: 2rem;
+}
+
+.u-margin-top-medium {
+	margin-top: 3.5rem;
+}
+
 .u-margin-top-big {
 	margin-top: 8rem;
 }
