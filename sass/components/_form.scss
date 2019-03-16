@@ -93,4 +93,6 @@
 	&__radio-input:checked ~ &__radio-label &__radio-button:after {
 		opacity: 1;
 	}
+
+	//first have to select the sibling of "__radio-input" , in other word the parent of "__radio-button" which is "&__radio-label" otherwise won't work
 }
