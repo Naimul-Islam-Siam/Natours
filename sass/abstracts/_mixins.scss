@@ -15,3 +15,43 @@
 		color: transparent; //to show the linear-gradient color as text color
 	}
 }
+
+
+//Media Query Manager
+
+//breakpoints: 
+/*
+phone : 0px-600px;			max-width: 600px  	37.5em	[1em = 16px]
+tab-port: 600px-900px;		max-width: 900px	56.25em
+tab-land: 900px-1200px;		max-width: 1200px	75em
+normal: 1200px - 1800px;	max-width: 1800px	112.5em
+big-desk: 1800px+;			min-width: 1800px	112.5em
+*/
+
+/* Order: base + typography -> general-layout + grid -> page-layout -> component */
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em){
+			@content
+		};
+	}
+
+	@if $breakpoint == tab-port {
+		@media (max-width: 56.25em) {
+			@content
+		};
+	}
+
+	@if $breakpoint == tab-land {
+		@media (max-width: 75em) {
+			@content
+		};
+	}
+
+	@if $breakpoint == big-desk {
+		@media (min-width: 112.5em) {
+			@content
+		};
+	}
+}
