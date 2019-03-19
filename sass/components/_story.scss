@@ -32,6 +32,8 @@
 		position: relative;
 
 		@include respond(phone) {
+			width: 10rem;
+			height: 10rem;
 			transform: translateX(-3rem) skewX(0);
 		}
 	}
@@ -41,6 +43,10 @@
 		transform: translateX(-4rem) scale(1.4);
 		transition: all 0.8s;
 		backface-visibility: hidden;
+
+		@include respond(phone) {
+			transform: translateX(-2rem) scale(1);
+		}
 	}
 
 	&__text {
@@ -73,5 +79,9 @@
 	&:hover &__img {
 		transform: translateX(-4rem) scale(1);
 		filter: blur(3px) brightness(80%);
+
+		@include respond(phone) {
+			transform: translateX(-2rem) scale(0.8);
+		}
 	}
 }

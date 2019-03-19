@@ -374,7 +374,8 @@ body {
         left: 0;
         transform: translate(0);
         width: 100%;
-        padding: 7rem 4.2rem 4.2rem 4.2rem; }
+        padding: 7rem 4.2rem 4.2rem 4.2rem;
+        border-radius: 3px; }
       .card__price--only {
         font-size: 1rem; }
       .card__price-box {
@@ -396,7 +397,8 @@ body {
       .composition__photo {
         position: relative;
         float: left;
-        width: 33.3333333%; } }
+        width: 33.3333333%;
+        outline-offset: 1rem; } }
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
@@ -425,6 +427,9 @@ body {
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20;
       outline: 1.5rem solid #55c57a; }
+      @media (max-width: 56.25em) {
+        .composition__photo:hover {
+          outline: 0.8rem solid #55c57a; } }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
 
@@ -566,12 +571,17 @@ body {
     position: relative; }
     @media (max-width: 37.5em) {
       .story__shape {
+        width: 10rem;
+        height: 10rem;
         transform: translateX(-3rem) skewX(0); } }
   .story__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
     transition: all 0.8s;
     backface-visibility: hidden; }
+    @media (max-width: 37.5em) {
+      .story__img {
+        transform: translateX(-2rem) scale(1); } }
   .story__text {
     transform: skewX(12deg); }
     @media (max-width: 37.5em) {
@@ -595,6 +605,9 @@ body {
   .story:hover .story__img {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%); }
+    @media (max-width: 37.5em) {
+      .story:hover .story__img {
+        transform: translateX(-2rem) scale(0.8); } }
 
 .footer {
   background-color: #333;
@@ -712,11 +725,15 @@ body {
     position: absolute;
     top: 40px;
     left: 40px; }
+    @media (max-width: 37.5em) {
+      .header__logo-box {
+        top: 30px;
+        left: 30px; } }
   .header__logo {
     height: 35px; }
     @media (max-width: 37.5em) {
       .header__logo {
-        height: 30px; } }
+        height: 29px; } }
   .header__logo:hover {
     animation-name: logo;
     animation-duration: 1.2s; }
@@ -752,8 +769,9 @@ body {
     .navigation__button {
       height: 5rem;
       width: 5rem;
-      top: 4rem;
-      right: 4rem; } }
+      top: 3.5rem;
+      right: 2rem;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); } }
 
 .navigation__background {
   height: 6rem;
@@ -775,8 +793,8 @@ body {
     .navigation__background {
       height: 3.5rem;
       width: 3.5rem;
-      top: 4.5rem;
-      right: 4.5rem; } }
+      top: 4rem;
+      right: 2.5rem; } }
 
 .navigation__nav {
   height: 100vh;
@@ -786,6 +804,7 @@ body {
   z-index: 1500;
   width: 0;
   opacity: 0;
+  visibility: hidden;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 .navigation__list {
@@ -825,7 +844,8 @@ body {
 
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
-  width: 100%; }
+  width: 100%;
+  visibility: visible; }
 
 .navigation__icon {
   position: relative;
@@ -851,18 +871,24 @@ body {
     top: -0.8rem; }
     @media (max-width: 37.5em) {
       .navigation__icon::before {
-        top: -0.9rem; } }
+        top: -0.6rem; } }
   .navigation__icon::after {
     top: 0.8rem; }
     @media (max-width: 37.5em) {
       .navigation__icon::after {
-        top: 0.9rem; } }
+        top: 0.6rem; } }
 
 .navigation__button:hover .navigation__icon::before {
   top: -1rem; }
+  @media (max-width: 37.5em) {
+    .navigation__button:hover .navigation__icon::before {
+      top: -0.8rem; } }
 
 .navigation__button:hover .navigation__icon::after {
   top: 1rem; }
+  @media (max-width: 37.5em) {
+    .navigation__button:hover .navigation__icon::after {
+      top: 0.8rem; } }
 
 .navigation__checkbox:checked ~ .navigation__button .navigation__icon {
   background-color: transparent; }

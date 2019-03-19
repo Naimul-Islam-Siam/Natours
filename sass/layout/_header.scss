@@ -22,13 +22,18 @@
 		position: absolute;
 		top: 40px;
 		left: 40px;
+
+		@include respond(phone) {
+			top: 30px;
+			left: 30px;
+		}
 	}
 
 	&__logo {
 		height: 35px;
 
 		@include respond(phone) {
-			height: 30px;
+			height: 29px;
 		}
 	}
 

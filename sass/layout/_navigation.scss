@@ -26,8 +26,9 @@
 		@include respond(phone) {
 			height: 5rem;
 			width: 5rem;
-			top: 4rem;
-			right: 4rem;
+			top: 3.5rem;
+			right: 2rem;
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 		}
 	}
 
@@ -54,8 +55,8 @@
 		@include respond(phone) {
 			height: 3.5rem;
 			width: 3.5rem;
-			top: 4.5rem;
-			right: 4.5rem;
+			top: 4rem;
+			right: 2.5rem;
 		}
 	}
 
@@ -68,6 +69,7 @@
 
 		width: 0;
 		opacity: 0;
+        visibility: hidden;
 
 		transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	}
@@ -120,8 +122,8 @@
 	&__checkbox:checked ~ &__nav {
 		opacity: 1;
 		width: 100%;
+        visibility: visible;
 	}
-
 
 	&__icon {
 		position: relative;
@@ -157,7 +159,7 @@
 			top: -0.8rem;
 
 			@include respond(phone) {
-				top: -0.9rem;
+				top: -0.6rem;
 			}
 		}
 
@@ -165,17 +167,25 @@
 			top: 0.8rem;
 
 			@include respond(phone) {
-				top: 0.9rem;
+				top: 0.6rem;
 			}
 		}
 	}
 
 	&__button:hover &__icon::before {
 		top: -1rem;
+        
+        @include respond(phone) {
+            top: -0.8rem;
+        }
 	}
 
 	&__button:hover &__icon::after {
 		top: 1rem;
+        
+        @include respond(phone) {
+            top: 0.8rem;
+        }
 	}
 
 	&__checkbox:checked ~ &__button &__icon {
