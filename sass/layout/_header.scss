@@ -26,6 +26,10 @@
 
 	&__logo {
 		height: 35px;
+
+		@include respond(phone) {
+			height: 30px;
+		}
 	}
 
 	&__logo:hover {
