@@ -4,18 +4,18 @@
 		rgba($color-primary-light, 0.8), 
 		rgba($color-primary-dark, 0.8)), 
 	url(../img/hero-small.jpg);
-	height: 95vh; /*always 95% of the screen*/
+	height: 85vh; /*always 95% of the screen*/
 	background-size: cover; /*always try to fit the width of the screen*/
 	background-position: top; /*top part of the image is fixed regardless the responsive screen size*/
-	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*(x y, x y, x y, x y)*/
 	position: relative;
 
 
 	//if [ minimum screen-resolution is 192dpi AND minimum screen-width is 37.5em(600px) ] 
 	//OR [minimum screen-width is 125em(2000px)]
-	
+
 	@media (min-resolution: 192dpi) and (min-width: 37.5em),
-		@media (min-width: 125em) {
+		(-webkit-min-device-pixel-ration: 2) and (min-width: 37.5em),
+		(min-width: 125em) {
 			background-image: linear-gradient(
 				to right bottom, 
 				rgba($color-primary-light, 0.8), 
@@ -26,6 +26,12 @@
 			background-position: top;
 			clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 			position: relative;
+	}
+
+	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+		height: 95vh;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*(x y, x y, x y, x y)*/
+		clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*(x y, x y, x y, x y)*/
 	}
 
 	@include respond(tab-port) {
