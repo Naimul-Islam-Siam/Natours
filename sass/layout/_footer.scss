@@ -21,10 +21,6 @@
 		width: 15rem;
 		height: auto;
 
-		@include respond(phone) {
-			width: 10rem;
-		}
-
 		&:hover {
 			animation-name: logo;
 			animation-duration: 1.2s;

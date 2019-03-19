@@ -626,9 +626,6 @@ body {
   .footer__logo {
     width: 15rem;
     height: auto; }
-    @media (max-width: 37.5em) {
-      .footer__logo {
-        width: 10rem; } }
     .footer__logo:hover {
       animation-name: logo;
       animation-duration: 1.2s; }
@@ -705,7 +702,7 @@ body {
     width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
 
 .header {
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
   height: 95vh;
   /*always 95% of the screen*/
   background-size: cover;
