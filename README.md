@@ -7,7 +7,7 @@ Another goal is to **maintain** css/**project architecture** of professional lev
 
 Also SASS was used with SCSS syntax.
 
-**Live Demo** : naimul-islam-siam.github.io/Natours 
+**Live Demo** : https://naimul-islam-siam.github.io/Natours/
 
 Special Mention :
 
