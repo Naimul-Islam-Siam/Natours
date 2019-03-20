@@ -825,7 +825,7 @@ body {
         transform: translate(0);
         width: 100%;
         padding: 7rem 4.2rem 4.2rem 4.2rem;
-        border-radius: 3px; }
+        border-radius: 3px !important; }
       .card__price--only {
         font-size: 1rem; }
       .card__price-box {
